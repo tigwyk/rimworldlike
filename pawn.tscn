@@ -8,7 +8,7 @@ radius = 63.0
 height = 130.0
 
 [node name="Pawn" type="CharacterBody2D"]
-scale = Vector2(0.125, 0.125)
+scale = Vector2(0.123, 0.123)
 script = ExtResource("1_o6oh4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=4 uid="uid://cw7r5eao1j3ys"]
+[gd_scene load_steps=10 format=4 uid="uid://cw7r5eao1j3ys"]
 
 [ext_resource type="Texture2D" uid="uid://ejhd34opaa0m" path="res://assets/art/terrain_tileset.png" id="1_km2bi"]
 [ext_resource type="Script" uid="uid://biy4awje0emp4" path="res://scripts/terrain.gd" id="2_5hk42"]
 [ext_resource type="Script" uid="uid://b8rww7vhpoeos" path="res://scripts/pathfinding.gd" id="3_5hk42"]
 [ext_resource type="Script" uid="uid://dvsfxbteb2dcg" path="res://scripts/camera_controller.gd" id="4_1ns3a"]
 [ext_resource type="PackedScene" uid="uid://dnxct42t0uifv" path="res://pawn.tscn" id="4_ob7o4"]
+[ext_resource type="Script" uid="uid://dq8uqbcrvkxre" path="res://scripts/item_manager.gd" id="6_ryrav"]
+[ext_resource type="PackedScene" uid="uid://bidq71il4ya17" path="res://item.tscn" id="7_eow3j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ob7o4"]
 texture = ExtResource("1_km2bi")
@@ -24,7 +26,7 @@ custom_data_layer_0/name = "movement_difficulty"
 custom_data_layer_0/type = 3
 sources/0 = SubResource("TileSetAtlasSource_ob7o4")
 
-[node name="Node2D" type="Node2D"]
+[node name="Game" type="Node2D"]
 
 [node name="TerrainLayer" type="TileMapLayer" parent="."]
 use_parent_material = true
@@ -50,3 +52,7 @@ script = ExtResource("4_1ns3a")
 
 [node name="Pawn" parent="." instance=ExtResource("4_ob7o4")]
 position = Vector2(1096, 360)
+
+[node name="ItemManager" type="Node2D" parent="."]
+script = ExtResource("6_ryrav")
+base_item = ExtResource("7_eow3j")

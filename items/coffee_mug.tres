@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dj3dax2h1a8ox"]
+
+[ext_resource type="Script" uid="uid://gj5dkqkrt5o6" path="res://scripts/resources/item_resource.gd" id="1_obwwh"]
+[ext_resource type="Texture2D" uid="uid://bhj78rcgaechd" path="res://assets/art/Furniture 4.png" id="2_mee5x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ela6f"]
+atlas = ExtResource("2_mee5x")
+region = Rect2(0, 48, 16, 16)
+
+[resource]
+script = ExtResource("1_obwwh")
+count = 0
+weight = 0.2
+texture = SubResource("AtlasTexture_ela6f")
+metadata/_custom_type_script = "uid://gj5dkqkrt5o6"
