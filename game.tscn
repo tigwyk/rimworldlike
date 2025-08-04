@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://cw7r5eao1j3ys"]
+[gd_scene load_steps=12 format=4 uid="uid://cw7r5eao1j3ys"]
 
 [ext_resource type="Texture2D" uid="uid://ejhd34opaa0m" path="res://assets/art/terrain_tileset.png" id="1_km2bi"]
 [ext_resource type="Script" uid="uid://biy4awje0emp4" path="res://scripts/terrain.gd" id="2_5hk42"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://dnxct42t0uifv" path="res://pawn.tscn" id="4_ob7o4"]
 [ext_resource type="Script" uid="uid://dq8uqbcrvkxre" path="res://scripts/item_manager.gd" id="6_ryrav"]
 [ext_resource type="PackedScene" uid="uid://bidq71il4ya17" path="res://item.tscn" id="7_eow3j"]
+[ext_resource type="PackedScene" uid="uid://y1tvjhjnbtjl" path="res://food.tscn" id="8_j5wjh"]
+[ext_resource type="PackedScene" uid="uid://b3bt1w6mjt1kh" path="res://task_manager.tscn" id="9_vef74"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ob7o4"]
 texture = ExtResource("1_km2bi")
@@ -53,6 +55,9 @@ script = ExtResource("4_1ns3a")
 [node name="Pawn" parent="." instance=ExtResource("4_ob7o4")]
 position = Vector2(1096, 360)
 
-[node name="ItemManager" type="Node2D" parent="."]
+[node name="ItemManager" type="Node" parent="."]
 script = ExtResource("6_ryrav")
 base_item = ExtResource("7_eow3j")
+base_food = ExtResource("8_j5wjh")
+
+[node name="TaskManager" parent="." instance=ExtResource("9_vef74")]

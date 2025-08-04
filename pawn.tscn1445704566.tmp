@@ -18,12 +18,5 @@ texture = ExtResource("2_augvb")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_o6oh4")
 
-[node name="PawnAI" type="Node" parent="." node_paths=PackedStringArray("hunger_bar")]
+[node name="PawnAI" type="Node" parent="."]
 script = ExtResource("3_augvb")
-hunger_bar = NodePath("../HungerBar")
-
-[node name="HungerBar" type="ProgressBar" parent="."]
-offset_left = -65.0406
-offset_top = -97.561
-offset_right = 64.9594
-offset_bottom = -69.561

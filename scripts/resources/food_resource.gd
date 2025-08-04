@@ -1,5 +1,5 @@
-extends Item
-class_name Food
+extends ItemData
+class_name FoodData
 
 enum FoodType {
 	OMNIVORE = 0,
